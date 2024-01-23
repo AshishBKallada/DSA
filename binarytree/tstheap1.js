@@ -58,3 +58,19 @@ function printHeap(heap)
         console.log(heap[i]);
     }
 }
+
+function heapSort(arr) {
+    // Build max heap
+    buildHeap(arr);
+
+    // Extract elements from the heap one by one
+    for (let i = arr.length - 1; i > 0; i--) {
+        // Swap the root (maximum value) with the last element
+        [arr[0], arr[i]] = [arr[i], arr[0]];
+
+        // Call heapify on the reduced heap
+        heapify(arr, i, 0);
+    }
+
+    return arr;
+}

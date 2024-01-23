@@ -130,7 +130,6 @@ class Tree {
 }
 
 const myTree = new Tree();
-
 myTree.insert(10);
 myTree.insert(5);
 myTree.insert(15);
